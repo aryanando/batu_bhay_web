@@ -62,8 +62,9 @@ sr.reveal('.stats__item', {
   origin: 'top',
 });
 
-// services
+// services and poli
 sr.reveal('.services');
+sr.reveal('.poli');
 sr.reveal('.services__top');
 sr.reveal('.services__item', {
   delay: 600,
@@ -71,6 +72,8 @@ sr.reveal('.services__item', {
   interval: 100,
   origin: 'bottom',
 });
+
+
 
 // appointment
 sr.reveal('.appointment__title');
