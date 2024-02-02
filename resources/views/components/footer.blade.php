@@ -5,27 +5,26 @@
             <!-- footer contact section -->
             <div class="footer__item flex-1">
                 <!-- logo -->
-                <a href="">
-                    <img class="mb-[30px]" src="assets/img/header/logo.svg" alt="" />
+                <a href="/">
+                    <img class="mb-[30px]" src="/assets/img/header/logo-2.png" alt="" />
                 </a>
                 <!-- description -->
                 <p class="mb-[20px]">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
-                    quas?
+                    Hubungi kami segera jika anda membutuhkan bantuan kesehatan
                 </p>
                 <!-- location, email & phone -->
                 <div class="flex flex-col gap-y-3 mb-10">
                     <div class="flex items-center gap-x-[6px]">
                         <i class="ri-map-pin-fill text-[24px] text-accent"></i>
-                        <div>123 Arling, Miola, NY</div>
+                        <div>Jl Kartini no 1, Kec. Batu, Kota Batu</div>
                     </div>
                     <div class="flex items-center gap-x-[6px]">
                         <i class="ri-mail-fill text-[24px] text-accent"></i>
-                        <div>insove@email.com</div>
+                        <div>batubhayangkara@gmail.com</div>
                     </div>
                     <div class="flex items-center gap-x-[6px]">
                         <i class="ri-phone-fill text-[24px] text-accent"></i>
-                        <div>(+123) 456 78910</div>
+                        <div>(0341) 591067</div>
                     </div>
                 </div>
                 <!-- socials -->
@@ -55,37 +54,37 @@
                     <!-- list 1 -->
                     <ul class="flex-1 flex flex-col gap-y-5">
                         <li>
-                            <a href="#" class="hover:text-accent transition-all">Home</a>
+                            <a href="#0" onclick="my_modal_2.showModal()" class="hover:text-accent transition-all">Beranda</a>
                         </li>
                         <li>
-                            <a href="#" class="hover:text-accent transition-all">Doctors</a>
+                            <a href="#0" onclick="my_modal_2.showModal()" class="hover:text-accent transition-all">Profil</a>
                         </li>
                         <li>
-                            <a href="#" class="hover:text-accent transition-all">Department</a>
+                            <a href="#0" onclick="my_modal_2.showModal()" class="hover:text-accent transition-all">Dokter</a>
                         </li>
                         <li>
-                            <a href="#" class="hover:text-accent transition-all">Services</a>
+                            <a href="#0" onclick="my_modal_2.showModal()" class="hover:text-accent transition-all">Pelayanan</a>
                         </li>
                         <li>
-                            <a href="#" class="hover:text-accent transition-all">Blog</a>
+                            <a href="#0" onclick="my_modal_2.showModal()" class="hover:text-accent transition-all">Blog</a>
                         </li>
                     </ul>
                     <!-- list 2 -->
                     <ul class="flex-1 flex flex-col gap-y-5">
                         <li>
-                            <a href="#" class="hover:text-accent transition-all">Our Pricing</a>
+                            <a href="#0" onclick="my_modal_2.showModal()" class="hover:text-accent transition-all">Our Pricing</a>
                         </li>
                         <li>
-                            <a href="#" class="hover:text-accent transition-all">Contact</a>
+                            <a href="#0" onclick="my_modal_2.showModal()" class="hover:text-accent transition-all">Contact</a>
                         </li>
                         <li>
-                            <a href="#" class="hover:text-accent transition-all">Careers</a>
+                            <a href="#0" onclick="my_modal_2.showModal()" class="hover:text-accent transition-all">Careers</a>
                         </li>
                         <li>
-                            <a href="#" class="hover:text-accent transition-all">Faqs</a>
+                            <a href="#0" onclick="my_modal_2.showModal()" class="hover:text-accent transition-all">Faqs</a>
                         </li>
                         <li>
-                            <a href="#" class="hover:text-accent transition-all">Privacy Policy</a>
+                            <a href="#0" onclick="my_modal_2.showModal()" class="hover:text-accent transition-all">Privacy Policy</a>
                         </li>
                     </ul>
                 </div>

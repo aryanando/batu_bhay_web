@@ -1,3 +1,5 @@
+
+
 <!-- header -->
 <header class="py-8 lg:pt-6 lg:pb-14">
     <div class="container mx-auto lg:relative flex flex-col lg:flex-row lg:justify-between gap-y-4 lg:gap-y-0">
@@ -36,37 +38,37 @@
                 <!-- logo, list, form -->
                 <div class="px-12 flex flex-col gap-y-12 h-full">
                     <!-- logo -->
-                    <a href="#">
+                    <a href="/">
                         <img src="assets/img/header/logo.svg" alt="" />
                     </a>
                     <!-- list -->
                     <ul class="flex flex-col gap-y-5">
                         <li>
-                            <a href="#"
+                            <a href="/"
                                 class="text-secondary hover:text-accent transition-all duration-300">Beranda</a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="#" onclick="my_modal_2.showModal()"
                                 class="text-secondary hover:text-accent transition-all duration-300">Profil</a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="#" onclick="my_modal_2.showModal()"
                                 class="text-secondary hover:text-accent transition-all duration-300">Dokter</a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="#" onclick="my_modal_2.showModal()"
                                 class="text-secondary hover:text-accent transition-all duration-300">Department</a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="#" onclick="my_modal_2.showModal()"
                                 class="text-secondary hover:text-accent transition-all duration-300">Pelayanan</a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="/blog"
                                 class="text-secondary hover:text-accent transition-all duration-300">Blog</a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="#" onclick="my_modal_2.showModal()"
                                 class="text-secondary hover:text-accent transition-all duration-300">Contact</a>
                         </li>
                     </ul>
@@ -87,31 +89,31 @@
                 <!-- list -->
                 <ul class="flex gap-x-4">
                     <li>
-                        <a href="#"
+                        <a href="/"
                             class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300">Beranda</a>
                     </li>
                     <li>
-                        <a href="#"
+                        <a href="#" onclick="my_modal_2.showModal()"
                             class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300">Profil</a>
                     </li>
                     <li>
-                        <a href="#"
+                        <a href="#" onclick="my_modal_2.showModal()"
                             class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300">Dokter</a>
                     </li>
                     <li>
-                        <a href="#"
+                        <a href="#" onclick="my_modal_2.showModal()"
                             class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300">Department</a>
                     </li>
                     <li>
-                        <a href="#"
+                        <a href="#" onclick="my_modal_2.showModal()"
                             class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300">Pelayanan</a>
                     </li>
                     <li>
-                        <a href="#"
+                        <a href="/blog"
                             class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300">Blog</a>
                     </li>
                     <li>
-                        <a href="#"
+                        <a href="#" onclick="my_modal_2.showModal()"
                             class="text-secondary hover:text-accent transition-all duration-300">Contact</a>
                     </li>
                 </ul>
@@ -127,3 +129,6 @@
         </div>
     </div>
 </header>
+
+<x-modal />
+

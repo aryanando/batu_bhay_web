@@ -6,7 +6,7 @@
             Dokter Kami
         </h2>
         <!-- slider -->
-        <div class="team__slider swiper min-h-[400px]">
+        <div class="team__slider swiper min-h-[400px] ">
             <!-- additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- slide 1 -->
