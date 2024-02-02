@@ -29,7 +29,7 @@
 
     <x-blog.blog />
 
-    <x-footer />
+    <x-noscrollreveal.footer />
 
     <!-- temp div -->
     <!-- <div class="h-[4000px]"></div> -->

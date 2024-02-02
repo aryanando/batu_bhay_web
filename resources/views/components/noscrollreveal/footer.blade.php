@@ -1,9 +1,9 @@
 <!-- footer -->
-<footer class="footer pt-12 xl:pt-[150px]">
+<footer class=" pt-12 xl:pt-[150px]">
     <div class="container mx-auto pb-12 xl:pb-[100px]">
         <div class="flex flex-col xl:flex-row gap-x-5 gap-y-10">
             <!-- footer contact section -->
-            <div class="footer__item flex-1">
+            <div class=" flex-1">
                 <!-- logo -->
                 <a href="/">
                     <img class="mb-[30px]" src="/assets/img/header/logo-2.png" alt="" />
@@ -48,7 +48,7 @@
                 </div>
             </div>
             <!-- footer quick links section -->
-            <div class="footer__item flex-1">
+            <div class=" flex-1">
                 <h4 class="h4 mb-5">Tautan Cepat</h4>
                 <div class="flex gap-x-5">
                     <!-- list 1 -->
@@ -90,7 +90,7 @@
                 </div>
             </div>
             <!-- footer opening hours section -->
-            <div class="footer__item flex-1">
+            <div class=" flex-1">
                 <h4 class="h4 mb-5">Jam Buka</h4>
                 <!-- list -->
                 <div class="flex flex-col gap-5">

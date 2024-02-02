@@ -56,7 +56,7 @@ sr.reveal('.hero__img');
 
 // stats
 sr.reveal('.stats__item', {
-  delay: 600,
+  delay: 300,
   distance: '100px',
   interval: 100,
   origin: 'top',
@@ -67,7 +67,7 @@ sr.reveal('.services');
 sr.reveal('.poli');
 sr.reveal('.services__top');
 sr.reveal('.services__item', {
-  delay: 600,
+  delay: 300,
   distance: '100px',
   interval: 100,
   origin: 'bottom',
@@ -90,7 +90,7 @@ sr.reveal('.team__slider');
 // faq
 sr.reveal('.faq__title');
 sr.reveal('.faq__item', {
-  delay: 600,
+  delay: 300,
   distance: '100px',
   interval: 100,
   origin: 'bottom',
@@ -103,7 +103,7 @@ sr.reveal('.departments__container');
 // blog
 sr.reveal('.blog__title');
 sr.reveal('.blog__post', {
-  delay: 600,
+  delay: 300,
   distance: '100px',
   interval: 100,
   origin: 'bottom',
@@ -111,7 +111,7 @@ sr.reveal('.blog__post', {
 
 // brands
 sr.reveal('.brands__logo', {
-  delay: 600,
+  delay: 300,
   distance: '100px',
   interval: 100,
   origin: 'bottom',
@@ -123,7 +123,7 @@ sr.reveal('.newsletter__container');
 
 // footer
 sr.reveal('.footer__item', {
-  delay: 600,
+  delay: 300,
   distance: '100px',
   interval: 100,
   origin: 'bottom',
