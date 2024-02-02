@@ -26,19 +26,13 @@
 
 <body>
     <x-header />
-    <x-hero />
-    <x-stats />
-    <x-services />
-    <x-poli />
-    <x-testimony />
-    <x-team />
-    <x-faq />
-    <x-departement />
+
+    <x-blog.hero />
+
+    <x-blog.content />
+
     <x-blog />
-    <x-brand />
-    <x-gmap />
-    <x-complain />
-    <x-calendar />
+
     <x-footer />
 
     <!-- temp div -->
