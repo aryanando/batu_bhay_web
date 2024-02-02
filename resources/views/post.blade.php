@@ -27,7 +27,11 @@
 <body>
     <x-header />
 
-    <x-blog.blog />
+    <x-blog.hero />
+
+    <x-blog.content />
+
+    <x-blog />
 
     <x-footer />
 
