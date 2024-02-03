@@ -29,8 +29,7 @@ class=" max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-point
 {{-- @dd($post) --}}
 <!-- img -->
 <div class="relative overflow-hidden">
-    <img class="group-hover:scale-110 transition-all duration-500" src="/blog_images/{{ $post->slug}}-600x400.jpg"
-        alt="" />
+    <?=$post->image_tag("medium", false, 'group-hover:scale-110 transition-all duration-500'); ?>
     <!-- badge -->
     <div
         class="bg-accent-tertiary absolute bottom-0 left-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
@@ -47,7 +46,8 @@ class=" max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-point
     </h4>
     <!-- description -->
     <p class="font-light">
-        {{ Illuminate\Support\Str::limit($post->post_body, 150) }}
+        {{-- {{ Illuminate\Support\Str::limit($post->post_body, 150) }} --}}
+        <p>{!! mb_strimwidth($post->post_body_output(), 0, 200, '...') !!}</p>
 
         <a href="{{$post->url($locale, $routeWithoutLocale)}}" class="italic underline text-[#4c5354]">Read more</a>
     </p>
