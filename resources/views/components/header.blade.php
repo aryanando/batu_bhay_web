@@ -6,7 +6,7 @@
         <!-- logo -->
         <div class="flex justify-center lg:justify-normal">
             <a href="#">
-                <img src="./assets/img/header/logo-2.png" alt="" class=" h-16" />
+                <img src="/assets/img/header/logo-2.png" alt="" class=" h-16" />
             </a>
         </div>
 
@@ -39,7 +39,7 @@
                 <div class="px-12 flex flex-col gap-y-12 h-full">
                     <!-- logo -->
                     <a href="/">
-                        <img src="assets/img/header/logo.svg" alt="" />
+                        <img src="/assets/img/header/logo.svg" alt="" />
                     </a>
                     <!-- list -->
                     <ul class="flex flex-col gap-y-5">
