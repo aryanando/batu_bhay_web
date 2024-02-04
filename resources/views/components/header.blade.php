@@ -64,7 +64,7 @@
                                 class="text-secondary hover:text-accent transition-all duration-300">Pelayanan</a>
                         </li>
                         <li>
-                            <a href="/blog"
+                            <a href="/id/blog"
                                 class="text-secondary hover:text-accent transition-all duration-300">Blog</a>
                         </li>
                         <li>
@@ -109,7 +109,7 @@
                             class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300">Pelayanan</a>
                     </li>
                     <li>
-                        <a href="/blog"
+                        <a href="/id/blog"
                             class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300">Blog</a>
                     </li>
                     <li>
