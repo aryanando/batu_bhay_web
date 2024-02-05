@@ -66,7 +66,7 @@
                             <a href="#0" onclick="my_modal_2.showModal()" class="hover:text-accent transition-all">Pelayanan</a>
                         </li>
                         <li>
-                            <a href="/blog" class="hover:text-accent transition-all">Blog</a>
+                            <a href="/id/blog" class="hover:text-accent transition-all">Blog</a>
                         </li>
                     </ul>
                     <!-- list 2 -->

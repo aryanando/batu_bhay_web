@@ -18,8 +18,9 @@
             <!-- form -->
             <div class="mx-auto">
                 <iframe
+                    loading="async"
                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15808.892428450332!2d112.524016!3d-7.8717077!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd628220e88f345%3A0x4823a051c7d1cbb3!2sRS%20Bhayangkara%20Hasta%20Brata!5e0!3m2!1sen!2sid!4v1706837128320!5m2!1sen!2sid"
-                    style="border:0;" allowfullscreen="" loading="lazy"
+                    style="border:0;" allowfullscreen=""
                     referrerpolicy="no-referrer-when-downgrade" class=" h-80 w-80 lg:h-[27rem] lg:w-[27rem]">
                 </iframe>
             </div>
