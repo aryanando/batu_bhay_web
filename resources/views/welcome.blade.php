@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-
+{{-- @dd($postData) --}}
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,7 +34,7 @@
     <x-team />
     <x-faq />
     <x-departement />
-    <x-blog />
+    <x-blog :post="$postData"/>
     <x-brand />
     <x-gmap />
     <x-complain />
@@ -54,3 +54,5 @@
 </body>
 
 </html>
+
+

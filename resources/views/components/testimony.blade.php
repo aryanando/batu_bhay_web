@@ -19,18 +19,15 @@
                                     <!-- message -->
                                     <p
                                         class="font-light relative text-[22px] text-[#4c5354] leading-[190%] text-center xl:text-left before:bg-quoteLeft before:bg-contain before:bg-bottom before:inline-block before:top-0 before:w-10 before:h-10 before:bg-no-repeat after:bg-quoteRight after:bg-contain after:bg-bottom after:inline-block after:top-0 after:w-10 after:h-10 after:bg-no-repeat mb-7">
-                                        <span class="mx-2">Lorem ipsum dolor sit amet consectetur, adipisicing
-                                            elit. Doloribus dolores facere, totam minima error
-                                            quisquam numquam sint libero expedita doloremque eaque
-                                            harum.</span>
+                                        <span class="mx-2">Terima kasih sudah merawat saya, terima kasih pelayanannya mulai dari awal saya masuk di IGD sampai pindah ke kemuning hingga pulang. Semoga pembangunan segera selese, sukses buat hasta🤲🙏 …</span>
                                     </p>
                                     <!-- name -->
                                     <div class="text-[26px] text-[#4c5354] font-semibold">
-                                        James Rodrigo
+                                        Anggelia Via
                                     </div>
                                     <!-- job -->
                                     <div class="text-[#9ab4b7] font-medium uppercase tracking-[2.24px]">
-                                        Customer
+                                        Pasien
                                     </div>
                                 </div>
                             </div>
@@ -42,18 +39,15 @@
                                     <!-- message -->
                                     <p
                                         class="font-light relative text-[22px] text-[#4c5354] leading-[190%] text-center xl:text-left before:bg-quoteLeft before:bg-contain before:bg-bottom before:inline-block before:top-0 before:w-10 before:h-10 before:bg-no-repeat after:bg-quoteRight after:bg-contain after:bg-bottom after:inline-block after:top-0 after:w-10 after:h-10 after:bg-no-repeat mb-7">
-                                        <span class="mx-2">Lorem ipsum dolor sit amet consectetur, adipisicing
-                                            elit. Doloribus dolores facere, totam minima error
-                                            quisquam numquam sint libero expedita doloremque eaque
-                                            harum.</span>
+                                        <span class="mx-2">Dokter² nya ramah, pelayanan sudah baik tapi bisa dipercepat lagi. Saran untuk sound / speaker yang di pendaftaran & tempat pengambilan obat yang ada di luar itu lebih baik diganti saja yang lebih bagus, karena suaranya kurang keras & sering terdengar tidak jelas. Terima kasih</span>
                                     </p>
                                     <!-- name -->
                                     <div class="text-[26px] text-[#4c5354] font-semibold">
-                                        James Rodrigo
+                                        Ramadhan Cahyo Hariono
                                     </div>
                                     <!-- job -->
                                     <div class="text-[#9ab4b7] font-medium uppercase tracking-[2.24px]">
-                                        Customer
+                                        Pasien
                                     </div>
                                 </div>
                             </div>
