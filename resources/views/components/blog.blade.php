@@ -32,7 +32,7 @@
                         <p class="font-light">
                             {!! Str::limit($postData->post_body, 150) !!}
 
-                            <a href="/id/{{$postData->slug}}" class="italic underline text-[#4c5354]">Read more</a>
+                            <a href="/id/blog/{{$postData->slug}}" class="italic underline text-[#4c5354]">Read more</a>
                         </p>
                     </div>
                 </div>
