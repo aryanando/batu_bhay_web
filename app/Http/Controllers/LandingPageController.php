@@ -9,7 +9,9 @@ class LandingPageController extends Controller
 {
     public function index()
     {
-        $postData = BlogsModel::all();
+        $postData = BlogsModel::select('*')->offset(0)
+        ->limit(3)
+        ->get();
         return view("welcome", ['postData' => $postData]);
     }
 }
