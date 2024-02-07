@@ -32,12 +32,12 @@
     <x-poli />
     <x-testimony />
     <x-team />
-    <x-faq />
-    <x-departement />
+    {{-- <x-faq /> --}}
+    {{-- <x-departement /> --}}
     <x-blog :post="$postData"/>
-    <x-brand />
+    {{-- <x-brand /> --}}
     <x-gmap />
-    <x-complain />
+    {{-- <x-complain /> --}}
     <x-calendar />
     <x-footer />
 
