@@ -29,7 +29,7 @@
         <!-- Post Section -->
         <div class="w-full md:w-2/3 flex flex-col items-center px-3">
             <article class="flex flex-col shadow my-4">
-                <div class="bg-white flex flex-col justify-start p-6">
+                <div class="bg-white flex flex-col justify-start p-6 space-y-8">
                     <h1 class='blog_title h1'>{{ $post->title }}</h1>
                     <a href="#" class="text-blue-700 text-sm font-bold uppercase pb-4">{{ $post->subtitle }}</a>
                     <p href="#" class="text-sm pb-8">
