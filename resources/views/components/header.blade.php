@@ -39,7 +39,7 @@
                 <div class="px-12 flex flex-col gap-y-12 h-full">
                     <!-- logo -->
                     <a href="/">
-                        <img src="/assets/img/header/logo.svg" alt="" />
+                        <img src="/assets/img/header/logo-2.png" alt="" />
                     </a>
                     <!-- list -->
                     <ul class="flex flex-col gap-y-5">
