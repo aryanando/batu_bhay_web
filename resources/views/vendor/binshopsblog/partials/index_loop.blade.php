@@ -31,10 +31,10 @@ class=" max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-point
 <div class="relative overflow-hidden">
     <?=$post->image_tag("medium", false, 'group-hover:scale-110 transition-all duration-500'); ?>
     <!-- badge -->
-    <div
+    {{-- <div
         class="bg-accent-tertiary absolute bottom-0 left-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
         Medical
-    </div>
+    </div> --}}
 </div>
 <!-- text -->
 <div class="px-5 py-6">

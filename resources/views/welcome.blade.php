@@ -35,6 +35,7 @@
     {{-- <x-faq /> --}}
     {{-- <x-departement /> --}}
     <x-blog :post="$postData"/>
+    <x-buletin :post="$buletinData" />
     {{-- <x-brand /> --}}
     <x-gmap />
     {{-- <x-complain /> --}}

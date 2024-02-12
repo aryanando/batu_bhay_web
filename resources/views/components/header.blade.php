@@ -68,6 +68,10 @@
                                 class="text-secondary hover:text-accent transition-all duration-300">Blog</a>
                         </li>
                         <li>
+                            <a href="/id/blog/category/buletin"
+                                class="text-secondary hover:text-accent transition-all duration-300">Buletin</a>
+                        </li>
+                        <li>
                             <a href="#" onclick="my_modal_2.showModal()"
                                 class="text-secondary hover:text-accent transition-all duration-300">Contact</a>
                         </li>
@@ -111,6 +115,10 @@
                     <li>
                         <a href="/id/blog"
                             class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300">Blog</a>
+                    </li>
+                    <li>
+                        <a href="/id/blog/category/buletin"
+                            class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300">Buletin</a>
                     </li>
                     <li>
                         <a href="#" onclick="my_modal_2.showModal()"

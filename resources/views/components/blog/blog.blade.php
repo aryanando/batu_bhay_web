@@ -15,10 +15,10 @@
                         <img class="group-hover:scale-110 transition-all duration-500" src="assets/img/blog/img-1.png"
                             alt="" />
                         <!-- badge -->
-                        <div
+                        {{-- <div
                             class="bg-accent-tertiary absolute bottom-0 left-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
                             Medical
-                        </div>
+                        </div> --}}
                     </div>
                     <!-- text -->
                     <div class="px-5 py-6">
