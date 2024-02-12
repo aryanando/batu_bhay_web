@@ -10,9 +10,7 @@
                     Poliklinik Kami
                 </h2>
                 <p class="text-white flex-1 text-center xl:text-left max-w-2xl xl:max-w-none">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Repudiandae similique eveniet nobis reprehenderit est explicabo
-                    sunt sapiente dolore, maxime.
+                    Ditangani oleh dokter spesialis yang sangat berpengalaman. Melayani sepenuh hati penuh kasih sayang dan ramah tamah.
                 </p>
             </div>
         </div>

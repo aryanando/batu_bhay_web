@@ -141,12 +141,18 @@
                                         event_title: "Tahun Baru Imlek",
                                         event_theme: 'red'
                                     },
+                                    {
+                                        event_date: new Date(2024, 1, 14),
+                                        event_title: "Pemilu Legislatif 2024",
+                                        event_theme: 'red'
+                                    },
 
                                     {
                                         event_date: new Date(2024, 2, 11),
                                         event_title: "HR Nyepi Saka 1946",
                                         event_theme: 'red'
                                     },
+
                                     {
                                         event_date: new Date(2024, 2, 29),
                                         event_title: "Wafat Isa Almasih",
