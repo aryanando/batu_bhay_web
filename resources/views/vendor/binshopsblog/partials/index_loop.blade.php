@@ -42,7 +42,7 @@ class=" max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-point
     <div class="mb-4">{{ date('d M Y ', strtotime($post->post->posted_at)) }}</div>
     <!-- title -->
     <h4 class="h4 mb-[10px]">
-        {{Str::limit($post->title, 30)}}
+        {{Str::limit($post->title, 50)}}
     </h4>
     <!-- description -->
     <p class="font-light">
