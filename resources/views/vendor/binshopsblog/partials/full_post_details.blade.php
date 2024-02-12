@@ -36,7 +36,10 @@
                         By {{ $post->post->author->name }}, Published on {{ $post->post->posted_at->diffForHumans() }}
                     </p>
                     {!! $post->post_body_output() !!}
-
+                    <ol class="list-decimal list-inside">
+                        <li>AAA</li>
+                        <li>OOO</li>
+                    </ol>
                 </div>
             </article>
 
