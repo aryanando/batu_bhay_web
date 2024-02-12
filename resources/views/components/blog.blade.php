@@ -30,7 +30,7 @@
                         </h4>
                         <!-- description -->
                         <p class="font-light">
-                            <p class="line-clamp-3">{{ Illuminate\Support\Str::limit(str_replace(['&ndash;', '<p>', '</p>'], '', $post->post_body), 150) }}</p>
+                            <p class="line-clamp-3">{{ Illuminate\Support\Str::limit(str_replace(['&ndash;', '<p>', '</p>'], '', $postData->post_body), 150) }}</p>
 
                             <a href="/id/blog/{{$postData->slug}}" class="italic underline text-[#4c5354]">Read more</a>
                         </p>
