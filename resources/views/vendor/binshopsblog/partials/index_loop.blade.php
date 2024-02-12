@@ -25,11 +25,11 @@
 
 <!-- post 1 -->
 <div
-class=" max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
+class=" max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group min-h-[]">
 {{-- @dd($post) --}}
 <!-- img -->
 <div class="relative overflow-hidden">
-    <?=$post->image_tag("medium", false, 'group-hover:scale-110 transition-all duration-500'); ?>
+    <?= $post->image_tag("medium", false, 'group-hover:scale-110 transition-all duration-500'); ?>
     <!-- badge -->
     {{-- <div
         class="bg-accent-tertiary absolute bottom-0 left-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
@@ -47,7 +47,7 @@ class=" max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-point
     <!-- description -->
     <p class="font-light">
         {{-- {{ Illuminate\Support\Str::limit($post->post_body, 150) }} --}}
-        <p>{!! mb_strimwidth($post->post_body_output(), 0, 200, '...') !!}</p>
+        <p>{!! mb_strimwidth($post->post_body_output(), 0, 100, '...') !!}</p>
 
         <a href="{{$post->url($locale, $routeWithoutLocale)}}" class="italic underline text-[#4c5354]">Read more</a>
     </p>
