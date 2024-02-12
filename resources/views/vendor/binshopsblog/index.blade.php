@@ -29,9 +29,34 @@
 
     <section class="">
         <div class="container mx-auto">
-            <h3 class=" h3 mb-[50px] text-center xl:text-left mt-10">
+            <h3 class=" h3 mb-[20px] text-center xl:text-left mt-10">
                 Kabar Berita Dari Kami
             </h3>
+            <div class="my-5 {{
+                Request::is('id/blog/category/buletin') ||
+                Request::is('id/blog/category/buletin/dewasa') ||
+                Request::is('id/blog/category/buletin/bayi') ||
+                Request::is('id/blog/category/buletin/anak-anak') ||
+                Request::is('id/blog/category/buletin/remaja') ||
+                Request::is('id/blog/category/buletin/lansia')
+                ? 'active' : 'hidden'
+            }}">
+                <a href="/id/blog/category/buletin/" type="button"
+                    class="py-2.5 px-5 me-2 mb-2 text-sm font-medium focus:outline-none {{Request::is('id/blog/category/buletin') ? 'bg-gray-600 text-blue-500' : 'bg-white text-gray-900'}} rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Semua</a>
+                <a href="/id/blog/category/buletin/dewasa" type="button"
+                    class="py-2.5 px-5 me-2 mb-2 text-sm font-medium focus:outline-none {{Request::is('id/blog/category/buletin/dewasa') ? 'bg-gray-600 text-blue-500' : 'bg-white text-gray-900'}} rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Dewasa</a>
+                <a href="/id/blog/category/buletin/bayi" type="button"
+                    class="py-2.5 px-5 me-2 mb-2 text-sm font-medium focus:outline-none {{Request::is('id/blog/category/buletin/bayi') ? 'bg-gray-600 text-blue-500' : 'bg-white text-gray-900'}} rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Bayi
+                    dan Balita</a>
+                <a href="/id/blog/category/buletin/anak-anak" type="button"
+                    class="py-2.5 px-5 me-2 mb-2 text-sm font-medium focus:outline-none {{Request::is('id/blog/category/buletin/anak-anak') ? 'bg-gray-600 text-blue-500' : 'bg-white text-gray-900'}} rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Anak-anak</a>
+                <a href="/id/blog/category/buletin/remaja" type="button"
+                    class="py-2.5 px-5 me-2 mb-2 text-sm font-medium focus:outline-none {{Request::is('id/blog/category/buletin/remaja') ? 'bg-gray-600 text-blue-500' : 'bg-white text-gray-900'}} rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Remaja</a>
+                <a href="/id/blog/category/buletin/lansia" type="button"
+                    class="py-2.5 px-5 me-2 mb-2 text-sm font-medium focus:outline-none {{Request::is('id/blog/category/buletin/lansia') ? 'bg-gray-600 text-blue-500' : 'bg-white text-gray-900'}} rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Lansia</a>
+            </div>
+
+
             <!-- blog posts -->
             <div class="mx-auto">
                 <div
