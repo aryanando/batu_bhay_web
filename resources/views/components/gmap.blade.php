@@ -5,7 +5,7 @@
         <img src="assets/img/newsletter/pattern.svg" alt="" />
     </div>
     <!-- container -->
-    <div class="newsletter__container container mx-auto my-28">
+    <div class="newsletter__container container mx-auto my-10">
         <!-- wrapper -->
         <div class="lg:flex-row lg:items-center lg:gap-x-[58px] ">
             <!-- text -->
