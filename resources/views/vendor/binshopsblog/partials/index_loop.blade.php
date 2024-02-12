@@ -47,7 +47,7 @@ class=" max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-point
     <!-- description -->
     <p class="font-light">
         {{-- {{ Illuminate\Support\Str::limit($post->post_body, 150) }} --}}
-        <p>{!! mb_strimwidth($post->post_body_output(), 0, 100, '...') !!}</p>
+        <p>{!! mb_strimwidth($post->post_body_output(), 0, 80, '...') !!}</p>
 
         <a href="{{$post->url($locale, $routeWithoutLocale)}}" class="italic underline text-[#4c5354]">Read more</a>
     </p>
