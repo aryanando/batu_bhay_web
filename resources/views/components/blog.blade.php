@@ -26,7 +26,7 @@
                         <div class="mb-4">{{$postData->created_at}}</div>
                         <!-- title -->
                         <h4 class="h4 mb-[10px]">
-                            {{$postData->title}}
+                            {{Str::limit($postData->title, 30)}}
                         </h4>
                         <!-- description -->
                         <p class="font-light">
