@@ -36,6 +36,7 @@
                         By {{ $post->post->author->name }}, Published on {{ $post->post->posted_at->diffForHumans() }}
                     </p>
                     {!! $post->post_body_output() !!}
+
                 </div>
             </article>
 
