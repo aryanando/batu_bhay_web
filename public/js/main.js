@@ -18,14 +18,6 @@ closeBtn.addEventListener('click', () => {
 });
 
 // swiper
-const swiper = new Swiper('.swiper', {
-  loop: true,
-
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-});
 
 // faq
 const faqItems = document.querySelectorAll('.faq__item');

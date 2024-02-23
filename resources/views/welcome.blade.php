@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RS Bhayangkara Batu - Website Resmi</title>
-    @vite('resources/css/app.css')
+    @vite(['resources/css/app.css','resources/js/app.js'])
     <!-- css -->
     <link rel="stylesheet" href="dist/output.css" />
     <!-- icons -->
@@ -27,6 +27,7 @@
 <body>
     <x-header />
     <x-hero />
+    <x-carousel />
     <x-stats />
     <x-services />
     <x-poli />
@@ -47,7 +48,7 @@
 
     <!-- SCRIPTS -->
     <!-- swiper -->
-    <script src="js/swiper-bundle.min.js"></script>
+    {{-- <script src="js/swiper-bundle.min.js"></script> --}}
     <!-- scroll reveal -->
     <script src="js/scrollreveal.min.js"></script>
     <!-- main -->

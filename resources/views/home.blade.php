@@ -16,7 +16,12 @@
 
                         {{ __('You are logged in!') }}
                         <br />
-                        <a href="/chatify" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Live Chat</a>
+                        <div class="row">
+                            <div class="col">
+                                <a href="/chatify" class="btn btn-primary m-1" target="_blank" rel="noopener noreferrer">Live Chat</a>
+                                <a href="/blog_admin" class="btn btn-success m-1" target="_blank" rel="noopener noreferrer">Blog Admin</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

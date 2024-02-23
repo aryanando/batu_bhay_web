@@ -9,7 +9,7 @@
             <!-- slider -->
             <div class="max-w-[98%] xl:max-w-[710px]">
                 <!-- slider main container -->
-                <div class="swiper h-[400px]">
+                <div class="swiper2 h-[400px]">
                     <!-- additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- slide 1 -->
