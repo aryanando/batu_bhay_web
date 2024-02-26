@@ -59,15 +59,16 @@ const swiper = new Swiper(".swiper", {
     slideDuplicateActiveClass: "is-active",
 });
 
-const swiper2 = new Swiper('.swiper2', {
+const swiper2 = new Swiper(".swiper2", {
     loop: true,
 
     pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
+        el: ".swiper-pagination",
+        clickable: true,
     },
 });
 
+window.console.log('hallo');
 /**
  * Finally, we will attach the application instance to a HTML element with
  * an "id" attribute of "app". This element is included with the "auth"

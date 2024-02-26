@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\KuesionerController;
 use App\Http\Controllers\LandingPageController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -29,3 +30,4 @@ Route::get('/blog', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/kuesioner/kepuasan-pasien-gizi/{no_rawat}', [KuesionerController::class, 'gizi'])->middleware('auth:web');

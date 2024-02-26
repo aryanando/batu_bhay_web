@@ -19,9 +19,13 @@
         "vue": "^3.2.37"
     },
     "dependencies": {
+        "@themesberg/tailwind-datepicker": "^1.1.0",
         "@tiptap/starter-kit": "^2.1.16",
+        "flowbite": "^2.3.0",
+        "flowbite-datepicker": "^1.2.6",
         "font-awesome": "^4.7.0",
         "npm": "^10.4.0",
-        "swiper": "^11.0.6"
+        "swiper": "^11.0.6",
+        "tw-elements": "^1.1.0"
     }
 }
