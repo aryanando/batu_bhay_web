@@ -9,7 +9,7 @@
                             <div class="slide__number">01</div>
                             <div class="slide__title">Lebih Mudah Dengan Mobile JKN</div>
                             <div class="slide__subtitle">Kini RS Bhayangkara Hasta Brata Batu hadir dengan Pendaftaran Online melalui Mobile JKN, lebih mudah tanpa keluar rumah.</div>
-                            <a href="" class="slide__btn">
+                            <a href="https://dev.batubhayangkara.com/id/blog/lebih-mudah-dengan-mobile-jkn" class="slide__btn">
                                 <span class="slide__btn__text">Lebih Lanjut</span>
                                 <span class="slide__btn__icon">
                                     <svg width="100%" height="100%" viewBox="0 0 17 21" fill="none"
@@ -31,7 +31,7 @@
                             <div class="slide__number">02</div>
                             <div class="slide__title">Paket Medical Checkup : NARKOBA</div>
                             <div class="slide__subtitle">HASIL < 1 Jam/ 60 Menit, <p>Mendapatkan surat keterangan bebas Narkoba</p> <p>Jadwal Pelayanan: Senin - Jumat, 07.00 - 14.00</p></div>
-                            <a href="" class="slide__btn">
+                            <a href="https://dev.batubhayangkara.com/id/blog/paket-medical-checkup-narkoba" class="slide__btn">
                                 <span class="slide__btn__text">Lebih Lanjut</span>
                                 <span class="slide__btn__icon">
                                     <svg width="100%" height="100%" viewBox="0 0 17 21" fill="none"
@@ -52,8 +52,8 @@
                         <div class="people__card__content">
                             <div class="slide__number">03</div>
                             <div class="slide__title">PIRATA - Hampiri, Rawat & Antar</div>
-                            <div class="slide__subtitle">Ambulance Gratis untuk area Kota Batu</div>
-                            <a href="" class="slide__btn">
+                            <div class="slide__subtitle">Ambulance Gratis untuk Area Kota Batu</div>
+                            <a href="https://dev.batubhayangkara.com/id/blog/pirata---hampiri-rawat-antar" class="slide__btn">
                                 <span class="slide__btn__text">Lebih Lanjut</span>
                                 <span class="slide__btn__icon">
                                     <svg width="100%" height="100%" viewBox="0 0 17 21" fill="none"
