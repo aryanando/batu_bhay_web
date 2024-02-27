@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PostRequestKuesionerGizi;
+use App\Models\KoeisionerGiziModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class KuesionerController extends Controller
@@ -46,7 +49,7 @@ class KuesionerController extends Controller
             inner join kabupaten as kab on pasien.kd_kab = kab.kd_kab
             inner join propinsi as prop on pasien.kd_prop = prop.kd_prop
 
-            where tgl_keluar='".$tanggal."'and stts_pulang ='-'
+            where tgl_keluar='" . $tanggal . "'and stts_pulang ='-'
             and ran.no_rawat='" . $noRawat . "'
             order by bgl.nm_bangsal"
         );
@@ -74,10 +77,10 @@ class KuesionerController extends Controller
             inner join kabupaten as kab on pasien.kd_kab = kab.kd_kab
             inner join propinsi as prop on pasien.kd_prop = prop.kd_prop
 
-            where tgl_keluar='".$tanggal."'and stts_pulang ='-'
+            where tgl_keluar='" . $tanggal . "'and stts_pulang ='-'
             order by bgl.nm_bangsal"
             );
-            dd ($data);
+            dd($data);
         }
 
 
@@ -99,5 +102,24 @@ class KuesionerController extends Controller
         // dd($data);
 
 
+    }
+
+    public function simpanGizi(Request $request)
+    {
+        return response()->json(['data'=> $request], 200);
+        if (Auth::user()) {
+            KoeisionerGiziModel::create($data = [
+                "no_rawat" => $request->no_rawat,
+                "nama" => $request->nama,
+                "bgsl" => $request->bgsl,
+                "rasa" => $request->rasa,
+                "penampilan" => $request->penampilan,
+                "tekstur" => $request->tekstur,
+                "variasi" => $request->variasi,
+                "saran" => $request->saran,
+                "tgl" => $request->tgl
+            ]);
+            echo "Success";
+        }
     }
 }

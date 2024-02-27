@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers\API;
 
-use App\Http\Controllers\Controller;
+use App\Http\Requests\PostRequestKuesionerGizi;
 use App\Models\KoeisionerGiziModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-class KuesionerGiziController extends Controller
+class KuesionerGiziController extends BaseController
 {
     /**
      * Display a listing of the resource.
@@ -21,7 +22,27 @@ class KuesionerGiziController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // PostRequestKuesionerGizi
+        if (Auth::user()) {
+            try {
+                KoeisionerGiziModel::create($data = [
+                    "no_rawat" => $request->no_rawat,
+                    "nama" => $request->nama,
+                    "bgsl" => $request->bgsl,
+                    "rasa" => $request->rasa,
+                    "penampilan" => $request->penampilan,
+                    "tekstur" => $request->tekstur,
+                    "variasi" => $request->variasi,
+                    "saran" => $request->saran,
+                    "tgl" => $request->tgl
+                ]);
+                return response()->json(['data'=> $data], 200);
+            } catch (\Throwable $th) {
+                //throw $th;
+                return response()->json(['data'=> 'failed'], 500);
+            }
+        }
+
     }
 
     /**

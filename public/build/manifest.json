@@ -1,13 +1,18 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-GFlOB95j.css",
+    "file": "assets/app-m6sRsjwt.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
   "resources/js/app.js": {
-    "file": "assets/app-oAJK72Ji.js",
+    "file": "assets/app-H1dMRLol.js",
     "isEntry": true,
     "src": "resources/js/app.js"
+  },
+  "resources/js/kuesioner-gizi.js": {
+    "file": "assets/kuesioner-gizi-w40geAFS.js",
+    "isEntry": true,
+    "src": "resources/js/kuesioner-gizi.js"
   },
   "resources/sass/app.scss": {
     "file": "assets/app-pmJoiQs-.css",

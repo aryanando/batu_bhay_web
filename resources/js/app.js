@@ -5,6 +5,7 @@
  */
 
 import "./bootstrap";
+// import "./kuesioner-gizi.js";
 import { createApp } from "vue";
 
 /**
@@ -68,7 +69,64 @@ const swiper2 = new Swiper(".swiper2", {
     },
 });
 
-window.console.log('hallo');
+window.console.log("hallo");
+
+window.sendForm = async function sendData() {
+    // const { data } = await axios.post(
+    //     "/kuesioner/kepuasan-pasien-gizi/",
+    //     document.querySelector("#kuesioner-gizi-form"),
+    //     {
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //         },
+    //     }
+    // );
+    const json = JSON.stringify({
+        no_rawat: "2",
+        nama: "Jane Doe",
+        bgsl: "Kemuning",
+        rasa: 1,
+        penampilan: 1,
+        tekstur: 1,
+        variasi: 1,
+        saran: "Sudah sangat baik",
+        tgl: "2024-02-27",
+    });
+    // console.log(new FormData(kuesionerGiziForm))
+
+    // const { data2 } = await axios.post(
+    //     "/kuesioner/kepuasan-pasien-gizi/",
+    //     json,
+    //     {
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //         },
+    //     }
+    // ).then(function (response) {
+    //     console.log(response);
+    //   })
+    //   .catch(function (error) {
+    //     console.log(error);
+    //   });
+
+    const { data } = await axios
+        .post(
+            "/kuesioner/kepuasan-pasien-gizi/",
+            document.querySelector("#kuesionerGiziForm"),
+            {
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            }
+        )
+        .then(function (response) {
+            console.log(response);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+};
+
 /**
  * Finally, we will attach the application instance to a HTML element with
  * an "id" attribute of "app". This element is included with the "auth"
