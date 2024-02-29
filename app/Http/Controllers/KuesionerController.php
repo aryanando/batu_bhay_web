@@ -17,7 +17,7 @@ class KuesionerController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
 
     /**
@@ -27,7 +27,7 @@ class KuesionerController extends Controller
      */
     public function gizi(Request $request)
     {
-        $tanggal = "2024-02-27";
+        $tanggal = "2024-02-29";
         $noRawat = $request->no_rawat;
         $noRawat = substr_replace($noRawat, '/', 8, 0);
         $noRawat = substr_replace($noRawat, '/', 6, 0);
@@ -49,7 +49,7 @@ class KuesionerController extends Controller
             inner join kabupaten as kab on pasien.kd_kab = kab.kd_kab
             inner join propinsi as prop on pasien.kd_prop = prop.kd_prop
 
-            where tgl_keluar='" . $tanggal . "'and stts_pulang ='-'
+            where stts_pulang ='-'
             and ran.no_rawat='" . $noRawat . "'
             order by bgl.nm_bangsal"
         );
@@ -59,7 +59,7 @@ class KuesionerController extends Controller
 
         if (isset($data[0])) {
             // dd($data);
-            return view('koesioner_gizi', ['data' => $data[0]]);
+            return view('koesioner_gizi', ['data' => $data[0], 'no_rawat' => $noRawat]);
         } else {
             $data = DB::connection('simsvbaru')->select(
                 "
@@ -77,10 +77,10 @@ class KuesionerController extends Controller
             inner join kabupaten as kab on pasien.kd_kab = kab.kd_kab
             inner join propinsi as prop on pasien.kd_prop = prop.kd_prop
 
-            where tgl_keluar='" . $tanggal . "'and stts_pulang ='-'
+            where tgl_keluar='".$tanggal."'and stts_pulang ='-'
             order by bgl.nm_bangsal"
             );
-            dd($data);
+            dd ($data);
         }
 
 
@@ -104,22 +104,26 @@ class KuesionerController extends Controller
 
     }
 
-    public function simpanGizi(Request $request)
-    {
-        return response()->json(['data'=> $request], 200);
-        if (Auth::user()) {
-            KoeisionerGiziModel::create($data = [
-                "no_rawat" => $request->no_rawat,
-                "nama" => $request->nama,
-                "bgsl" => $request->bgsl,
-                "rasa" => $request->rasa,
-                "penampilan" => $request->penampilan,
-                "tekstur" => $request->tekstur,
-                "variasi" => $request->variasi,
-                "saran" => $request->saran,
-                "tgl" => $request->tgl
-            ]);
-            echo "Success";
-        }
+    public function simpanGizi(Request $request) {
+        // return response()->json(['data'=> "Hahaha"]);
+        // if (Auth::user()) {
+            try {
+                KoeisionerGiziModel::create($data = [
+                    "no_rawat" => $request->no_rawat,
+                    "nama" => $request->nama,
+                    "bgsl" => $request->bgsl,
+                    "rasa" => $request->rasa,
+                    "penampilan" => $request->penampilan,
+                    "tekstur" => $request->tekstur,
+                    "variasi" => $request->variasi,
+                    "saran" => $request->saran,
+                    "tgl" => $request->tgl
+                ]);
+                return response()->json(['data'=> $data], 200);
+            } catch (\Throwable $th) {
+                //throw $th;
+                return response()->json(['data'=> 'failed'], 500);
+            }
+        // }
     }
 }

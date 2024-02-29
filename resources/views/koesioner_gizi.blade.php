@@ -14,7 +14,8 @@
                             </div>
                         @endif
 
-                        <form class="w-full max-w-md" id="kuesionerGiziForm" method="POST" action="/kuesioner/kepuasan-pasien-gizi/">
+                        <form class="w-full max-w-md" id="kuesionerGiziForm" method="POST"
+                            action="/kuesioner/kepuasan-pasien-gizi/">
                             {{-- Nama --}}
                             <div class="md:flex md:items-center mb-6">
                                 <div class="md:w-1/3">
@@ -24,7 +25,7 @@
                                     </label>
                                 </div>
                                 <div class="md:w-2/3">
-                                    <input
+                                    <input name="nama"
                                         class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                                         id="inline-full-name" type="text" value="{{ $data->nama }}" disabled>
                                 </div>
@@ -39,7 +40,8 @@
                                             d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                                     </svg>
                                 </div>
-                                <input datepicker type="text" id="datepickerId" name="tgl"
+                                <input datepicker datepicker-format="yyyy-mm-dd" type="text" id="datepickerId"
+                                    name="tgl"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     placeholder="Select date">
                             </div>
@@ -54,7 +56,7 @@
                                                 htmlFor="html">
                                                 <input name="rasa" type="radio"
                                                     class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-full border border-blue-gray-200 text-gray-900 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-gray-900 checked:before:bg-gray-900 hover:before:opacity-10"
-                                                    id="html" />
+                                                    value="1" />
                                                 <span
                                                     class="absolute text-gray-900 transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
                                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5"
@@ -74,7 +76,7 @@
                                                 htmlFor="react">
                                                 <input name="rasa" type="radio"
                                                     class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-full border border-blue-gray-200 text-gray-900 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-gray-900 checked:before:bg-gray-900 hover:before:opacity-10"
-                                                    id="react" checked />
+                                                    value="0" checked />
                                                 <span
                                                     class="absolute text-gray-900 transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
                                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5"
@@ -103,7 +105,7 @@
                                                 htmlFor="html">
                                                 <input name="penampilan" type="radio"
                                                     class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-full border border-blue-gray-200 text-gray-900 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-gray-900 checked:before:bg-gray-900 hover:before:opacity-10"
-                                                    id="html" />
+                                                    id="html" value="1" />
                                                 <span
                                                     class="absolute text-gray-900 transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
                                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5"
@@ -123,7 +125,7 @@
                                                 htmlFor="react">
                                                 <input name="penampilan" type="radio"
                                                     class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-full border border-blue-gray-200 text-gray-900 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-gray-900 checked:before:bg-gray-900 hover:before:opacity-10"
-                                                    id="react" checked />
+                                                    id="react" value="0" checked />
                                                 <span
                                                     class="absolute text-gray-900 transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
                                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5"
@@ -152,7 +154,7 @@
                                                 htmlFor="html">
                                                 <input name="tekstur" type="radio"
                                                     class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-full border border-blue-gray-200 text-gray-900 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-gray-900 checked:before:bg-gray-900 hover:before:opacity-10"
-                                                    id="html" />
+                                                    id="html" value="1" />
                                                 <span
                                                     class="absolute text-gray-900 transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
                                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5"
@@ -172,7 +174,7 @@
                                                 htmlFor="react">
                                                 <input name="tekstur" type="radio"
                                                     class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-full border border-blue-gray-200 text-gray-900 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-gray-900 checked:before:bg-gray-900 hover:before:opacity-10"
-                                                    id="react" checked />
+                                                    id="react" checked value="0" />
                                                 <span
                                                     class="absolute text-gray-900 transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
                                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5"
@@ -201,7 +203,7 @@
                                                 htmlFor="html">
                                                 <input name="variasi" type="radio"
                                                     class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-full border border-blue-gray-200 text-gray-900 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-gray-900 checked:before:bg-gray-900 hover:before:opacity-10"
-                                                    id="html" />
+                                                    id="html" value="1" />
                                                 <span
                                                     class="absolute text-gray-900 transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
                                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5"
@@ -221,7 +223,7 @@
                                                 htmlFor="react">
                                                 <input name="variasi" type="radio"
                                                     class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-full border border-blue-gray-200 text-gray-900 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-gray-900 checked:before:bg-gray-900 hover:before:opacity-10"
-                                                    id="react" checked />
+                                                    id="react" checked value="0" />
                                                 <span
                                                     class="absolute text-gray-900 transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
                                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5"
@@ -247,7 +249,7 @@
                                     <div class="card-header">SARAN untuk pelayanan makanan di RS Bhayangkara Hasta Brata
                                         Batu!</div>
                                     <div class="card-body">
-                                        <textarea id="message" name="saran" rows="4"
+                                        <textarea id="saran" name="saran" rows="4"
                                             class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                             placeholder="Write your thoughts here..."></textarea>
                                     </div>
@@ -291,19 +293,51 @@
                             </div>
 
                         </form>
+
+
+                        {{-- <script type="text/javascript">
+                            $(document).ready(function() {
+                                $('.openModal').on('click', function(e) {
+                                    $('#interestModal').removeClass('invisible');
+                                });
+                                $('.closeModal').on('click', function(e) {
+                                    $('#interestModal').addClass('invisible');
+                                });
+                            });
+                        </script> --}}
+
                         <script>
-                            // function sendData() {
-                            //     const {
-                            //         data
-                            //     } = await axios.post('/api/v1/kuesioner/gizi', document.querySelector('#kuesioner-gizi-form'), {
-                            //         headers: {
-                            //             'Content-Type': 'application/json'
-                            //         }
-                            //     });
-                            // }
+                            function successModal() {
+                                var element = document.getElementById("successModal");
+                                element.classList.remove("invisible");
+                            }
+                            sendForm = async function sendData() {
+                                const json = JSON.stringify({
+                                    no_rawat: "<?= $no_rawat ?>",
+                                    nama: document.getElementById("inline-full-name").value,
+                                    bgsl: "{{ $data->bgsl }}",
+                                    rasa: document.querySelector('input[name="rasa"]:checked').value,
+                                    penampilan: document.querySelector('input[name="penampilan"]:checked').value,
+                                    tekstur: document.querySelector('input[name="tekstur"]:checked').value,
+                                    variasi: document.querySelector('input[name="variasi"]:checked').value,
+                                    saran: document.querySelector('textarea[name="saran"]').value,
+                                    tgl: document.getElementById("datepickerId").value,
+                                });
+                                // console.log(json)
 
+                                const data2 = await axios
+                                    .post("/kuesioner/kepuasan-pasien-gizi/", json, {
+                                        headers: {
+                                            "Content-Type": "application/json",
+                                        },
+                                    })
+                                    .then((response) => {
+                                        console.log(response.data);
+                                        successModal();
+                                    }).catch((error) => console.log(error));
 
-
+                            };
+                            // console.log("hahahaha")
                         </script>
                     </div>
                 </div>
