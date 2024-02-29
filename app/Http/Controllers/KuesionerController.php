@@ -77,10 +77,10 @@ class KuesionerController extends Controller
             inner join kabupaten as kab on pasien.kd_kab = kab.kd_kab
             inner join propinsi as prop on pasien.kd_prop = prop.kd_prop
 
-            where tgl_keluar='".$tanggal."'and stts_pulang ='-'
+            where stts_pulang ='-'
             order by bgl.nm_bangsal"
             );
-            dd ($data);
+            echo "data not found";
         }
 
 
