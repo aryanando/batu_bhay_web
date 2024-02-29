@@ -326,7 +326,7 @@
                                 // console.log(json)
 
                                 const data2 = await axios
-                                    .post("https://dev.batubhayangkara.com/kepuasan-pasien-gizi/", json, {
+                                    .post("https://dev.batubhayangkara.com/kuesioner/kepuasan-pasien-gizi/", json, {
                                         headers: {
                                             "Content-Type": "application/json",
                                         },
