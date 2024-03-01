@@ -135,9 +135,11 @@ class KuesionerController extends Controller
     }
 
     // Tampilkan Data
-    public function getDataKuesionerGizi(KuesionerGiziDataTable $dataTable, $token) {
+    public function getDataKuesionerGizi($token) {
         if ($token == 'KBLrQhzbcwvgHvEXXFA6QSy37GfViwMYr5qxzdQs25AtpR0UDGYqWlMXpwc7k02i') {
-            return $dataTable->render('kuesioner_gizi_data');
+            $data = new KoeisionerGiziModel();
+
+            return view('kuesioner_gizi_data', ['data' => $data->all()]);
         } else {
             echo "Maaf Anda Tidak Memiliki Izin";
         }

@@ -14,14 +14,14 @@
                             </div>
                         @endif
 
-                        {{ $dataTable->table() }}
+                        @foreach ($data as $dataKuesioner)
+                            <p>{{$dataKuesioner['nama']}}</p>
+                        @endforeach
+                            {{-- @dd($data) --}}
+                        {{-- {{ $dataTable->table() }} --}}
                     </div>
                 </div>
             </div>
         </div>
     </div>
 @endsection
-
-@push('scripts')
-    {{ $dataTable->scripts(attributes: ['type' => 'module']) }}
-@endpush
