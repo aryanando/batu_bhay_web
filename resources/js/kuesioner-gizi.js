@@ -1,3 +1,3 @@
-
+import 'laravel-datatables-vite';
 
 

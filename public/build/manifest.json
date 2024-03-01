@@ -1,4 +1,7 @@
 {
+  "_bootstrap.esm-uMiC6t4R.js": {
+    "file": "assets/bootstrap.esm-uMiC6t4R.js"
+  },
   "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": {
     "file": "assets/bootstrap-icons-TqycWyKO.woff",
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff"
@@ -13,12 +16,18 @@
     "src": "resources/css/app.css"
   },
   "resources/js/app.js": {
-    "file": "assets/app-s2ETU75u.js",
+    "file": "assets/app-YLsziUTu.js",
+    "imports": [
+      "_bootstrap.esm-uMiC6t4R.js"
+    ],
     "isEntry": true,
     "src": "resources/js/app.js"
   },
   "resources/js/kuesioner-gizi.js": {
-    "file": "assets/kuesioner-gizi-w40geAFS.js",
+    "file": "assets/kuesioner-gizi-V_jrXKx9.js",
+    "imports": [
+      "_bootstrap.esm-uMiC6t4R.js"
+    ],
     "isEntry": true,
     "src": "resources/js/kuesioner-gizi.js"
   },

@@ -5,7 +5,7 @@
  */
 
 import "./bootstrap";
-import 'laravel-datatables-vite';
+
 // import "./kuesioner-gizi.js";
 import { createApp } from "vue";
 
