@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\DataTables\KuesionerGiziDataTable;
 use App\Http\Requests\PostRequestKuesionerGizi;
 use App\Models\KoeisionerGiziModel;
 use Illuminate\Http\Request;
@@ -125,5 +126,15 @@ class KuesionerController extends Controller
                 return response()->json(['data'=> 'failed'], 500);
             }
         // }
+    }
+
+    // Tampilkan Data
+    public function getDataKuesionerGizi(KuesionerGiziDataTable $dataTable, $token) {
+        if ($token == 'KBLrQhzbcwvgHvEXXFA6QSy37GfViwMYr5qxzdQs25AtpR0UDGYqWlMXpwc7k02i') {
+            return $dataTable->render('kuesioner_gizi_data');
+        } else {
+            echo "Maaf Anda Tidak Memiliki Izin";
+        }
+
     }
 }

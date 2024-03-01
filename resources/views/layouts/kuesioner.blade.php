@@ -16,6 +16,12 @@
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/css/app.css', 'resources/js/app.js'])
+
+    <style>
+        .btn-secondary {
+            --bs-btn-color : #000;
+        }
+    </style>
 </head>
 
 <body>
@@ -122,6 +128,7 @@
         </main>
     </div>
     <script src="/js/datepicker.js"></script>
+    @stack('scripts')
 </body>
 
 </html>
