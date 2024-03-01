@@ -27,7 +27,7 @@
                                 <div class="md:w-2/3">
                                     <input name="nama"
                                         class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                                        id="inline-full-name" type="text" value="{{ $data->nama }}" disabled>
+                                        id="inline-full-name" type="text" value="{{ $data['nama'] }}" disabled>
                                 </div>
                             </div>
 
@@ -315,7 +315,7 @@
                                 const json = JSON.stringify({
                                     no_rawat: "<?= $no_rawat ?>",
                                     nama: document.getElementById("inline-full-name").value,
-                                    bgsl: "{{ $data->bgsl }}",
+                                    bgsl: "{{ $data['bgsl'] }}",
                                     rasa: document.querySelector('input[name="rasa"]:checked').value,
                                     penampilan: document.querySelector('input[name="penampilan"]:checked').value,
                                     tekstur: document.querySelector('input[name="tekstur"]:checked').value,
@@ -326,7 +326,7 @@
                                 // console.log(json)
 
                                 const data2 = await axios
-                                    .post("https://dev.batubhayangkara.com/kuesioner/kepuasan-pasien-gizi", json, {
+                                    .post("/kuesioner/kepuasan-pasien-gizi", json, {
                                         headers: {
                                             "Content-Type": "application/json",
                                         },
