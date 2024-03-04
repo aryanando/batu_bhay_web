@@ -1,5 +1,9 @@
 @extends('layouts.kuesioner')
 
+@push('custom-scripts')
+    @vite(['resources/js/app.js'])
+@endpush
+
 @section('content')
     <div class="container">
         <div class="row justify-content-center">

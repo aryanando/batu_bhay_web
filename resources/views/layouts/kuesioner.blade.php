@@ -15,22 +15,22 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/sass/app.scss', 'resources/css/app.css'])
+    @stack('custom-scripts')
 
     <style>
         .btn-secondary {
-            --bs-btn-color : #000;
+            --bs-btn-color: #000;
         }
     </style>
-    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.1/css/dataTables.dataTables.css" />
 
-    <script src="https://cdn.datatables.net/2.0.1/js/dataTables.js"></script>
     {{-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> --}}
 </head>
 
 <body>
 
-    <div id="successModal" class="relative z-10 invisible" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div id="successModal" class="relative z-10 invisible" aria-labelledby="modal-title" role="dialog"
+        aria-modal="true">
         <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
 
         <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
@@ -56,7 +56,8 @@
                         <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Terimakasih Sudah
                             Memberikan Tanggapan</h3>
 
-                        <button data-modal-hide="popup-modal" type="button" onclick="window.location='https://webapp.batubhayangkara.com/laporan/pasienranap.php'"
+                        <button data-modal-hide="popup-modal" type="button"
+                            onclick="window.location='https://webapp.batubhayangkara.com/laporan/pasienranap.php'"
                             class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-green-400 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Tutup</button>
                     </div>
                 </div>
