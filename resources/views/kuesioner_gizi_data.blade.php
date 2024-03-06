@@ -13,8 +13,28 @@
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/3.0.0/js/buttons.print.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.2/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/datetime/1.5.2/js/dataTables.dateTime.min.js"></script>
+
+    {{-- Chart --}}
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script src="https://cdn.canvasjs.com/jquery.canvasjs.min.js"></script>
+
     <script>
         let minDate, maxDate;
+        var countRasaEnak = 0;
+        var countRasaTidakEnak = 0;
+        var countPenamilanBaik = 0;
+        var countPenamilanTidakBaik = 0;
+        var countVariasi = 0;
+        var myChartRasa;
+        var dataPoints = [{
+                label: "Enak",
+                y: 5
+            },
+            {
+                label: "Tidak Enak",
+                y: 5
+            }
+        ]
 
         // Custom filtering function which will search data in column four between two values
         DataTable.ext.search.push(function(settings, data, dataIndex) {
@@ -41,7 +61,7 @@
             format: 'YYYY-MM-DD'
         });
 
-        let table = new DataTable('#myTable', {
+        var table = new DataTable('#myTable', {
             layout: {
                 topStart: {
                     buttons: [
@@ -51,9 +71,91 @@
             }
         });
 
+
         document.querySelectorAll('#min, #max').forEach((el) => {
-            el.addEventListener('change', () => table.draw());
+
+            el.addEventListener('change', () => {
+                table.draw()
+                table.rows().eq(0).each(function(index) {
+                    var row = table.row(index);
+
+                    var data = row.data();
+                    let dateData2 = new Date(data[2]);
+                    let dateDataMin = new Date(document.getElementById("min").value);
+                    let dateDataMax = new Date(document.getElementById("max").value);
+
+                    if (document.getElementById("min").value == null || document.getElementById(
+                            "min").value == "") {
+                        var min = true;
+                    } else {
+                        var min = (dateData2 >= dateDataMin);
+                    }
+                    if (document.getElementById("max").value == null || document.getElementById(
+                            "max").value == "") {
+                        var max = true;
+                    } else {
+                        var max = (dateDataMax >= dateData2);
+                    }
+
+                    if (min && max) {
+                        if (data[5] == "Enak") {
+                            countRasaEnak++;
+                        } else {
+                            countRasaTidakEnak++;
+                        }
+
+                        if (data[6] == "Menarik") {
+                            countPenamilanBaik++;
+                        } else {
+                            countPenamilanTidakBaik++;
+                        }
+                    }
+
+
+                    // console.log(data);
+                    // ... do something with data(), or row.node(), etc
+                });
+                console.log([countRasaEnak, countRasaTidakEnak, countPenamilanBaik,
+                    countPenamilanTidakBaik
+                ]);
+
+                renderChart(countRasaEnak, countRasaTidakEnak);
+
+
+
+            });
         });
+    </script>
+
+    <script>
+        window.onload = function() {
+            var options = {
+                animationEnabled: true,
+                title: {
+                    text: "Prosentasi Review Makanan Enak dan Tidak Enak"
+                },
+                data: [{
+                    type: "doughnut",
+                    innerRadius: "40%",
+                    showInLegend: true,
+                    legendText: "{label}",
+                    indexLabel: "{label}: #percent%",
+                    dataPoints: dataPoints,
+                }]
+            };
+            myChartRasa = new CanvasJS.Chart("chartContainer", options);
+            myChartRasa.render();
+        }
+
+        function renderChart() {
+            dataPoints[0]['y'] = countRasaEnak;
+            dataPoints[1]['y'] = countRasaTidakEnak;
+            myChartRasa.render();
+            countRasaEnak = 0;
+            countRasaTidakEnak = 0;
+            countPenamilanBaik = 0;
+            countPenamilanTidakBaik = 0;
+        }
     </script>
 @endpush
 
@@ -61,9 +163,6 @@
     <link href="https://cdn.datatables.net/2.0.1/css/dataTables.dataTables.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/buttons/3.0.0/css/buttons.dataTables.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/datetime/1.5.2/css/dataTables.dateTime.min.css" rel="stylesheet">
-
-    {{-- https://cdn.datatables.net/2.0.1/css/dataTables.dataTables.css --}}
-    {{-- https://cdn.datatables.net/buttons/3.0.0/css/buttons.dataTables.css --}}
 @endpush
 
 @section('content')
@@ -82,12 +181,16 @@
                         <table border="0" cellspacing="5" cellpadding="5">
                             <tbody>
                                 <tr>
-                                    <td>Minimum date:</td>
-                                    <td><input type="text" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" id="min" name="min"></td>
+                                    <td>Tanggal Awal:</td>
+                                    <td><input type="text"
+                                            class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                            id="min" name="min"></td>
                                 </tr>
                                 <tr>
-                                    <td>Maximum date:</td>
-                                    <td><input type="text" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" id="max" name="max"></td>
+                                    <td>Tanggal Akhir:</td>
+                                    <td><input type="text"
+                                            class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                            id="max" name="max"></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -140,6 +243,19 @@
 
 
                     </div>
+                </div>
+
+                <div class="mt-4 grid grid-cols-4 gap-4">
+                    <div class="card">
+                        <div class="card-header">
+                            Chart Rasa
+                        </div>
+                        <div class="card-body">
+                            <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+                        </div>
+                    </div>
+                    <!-- ... -->
+                    <div>09</div>
                 </div>
             </div>
         </div>
