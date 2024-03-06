@@ -24,17 +24,48 @@
         var countRasaTidakEnak = 0;
         var countPenamilanBaik = 0;
         var countPenamilanTidakBaik = 0;
-        var countVariasi = 0;
-        var myChartRasa;
-        var dataPoints = [{
-                label: "Enak",
-                y: 5
-            },
-            {
-                label: "Tidak Enak",
-                y: 5
-            }
-        ]
+        var countTeksturSesuai = 0;
+        var countTeksturTidakSesuai = 0;
+        var countBervariasi = 0;
+        var countTidakBervariasi = 0;
+        var dataPoints = {
+            rasa: [{
+                    label: "Enak",
+                    y: 5
+                },
+                {
+                    label: "Tidak Enak",
+                    y: 5
+                }
+            ],
+            tampilan: [{
+                    label: "Menarik",
+                    y: 5
+                },
+                {
+                    label: "Tidak Menarik",
+                    y: 5
+                }
+            ],
+            tekstur: [{
+                    label: "Sesuai",
+                    y: 5
+                },
+                {
+                    label: "Tidak Sesuai",
+                    y: 5
+                }
+            ],
+            variasi: [{
+                    label: "Bervariasi",
+                    y: 5
+                },
+                {
+                    label: "Tidak Bervariasi",
+                    y: 5
+                }
+            ],
+        }
 
         // Custom filtering function which will search data in column four between two values
         DataTable.ext.search.push(function(settings, data, dataIndex) {
@@ -76,85 +107,178 @@
 
             el.addEventListener('change', () => {
                 table.draw()
-                table.rows().eq(0).each(function(index) {
-                    var row = table.row(index);
-
-                    var data = row.data();
-                    let dateData2 = new Date(data[2]);
-                    let dateDataMin = new Date(document.getElementById("min").value);
-                    let dateDataMax = new Date(document.getElementById("max").value);
-
-                    if (document.getElementById("min").value == null || document.getElementById(
-                            "min").value == "") {
-                        var min = true;
-                    } else {
-                        var min = (dateData2 >= dateDataMin);
-                    }
-                    if (document.getElementById("max").value == null || document.getElementById(
-                            "max").value == "") {
-                        var max = true;
-                    } else {
-                        var max = (dateDataMax >= dateData2);
-                    }
-
-                    if (min && max) {
-                        if (data[5] == "Enak") {
-                            countRasaEnak++;
-                        } else {
-                            countRasaTidakEnak++;
-                        }
-
-                        if (data[6] == "Menarik") {
-                            countPenamilanBaik++;
-                        } else {
-                            countPenamilanTidakBaik++;
-                        }
-                    }
-
-
-                    // console.log(data);
-                    // ... do something with data(), or row.node(), etc
-                });
-                console.log([countRasaEnak, countRasaTidakEnak, countPenamilanBaik,
-                    countPenamilanTidakBaik
-                ]);
-
-                renderChart(countRasaEnak, countRasaTidakEnak);
-
-
-
+                dataChartReseter()
             });
         });
-    </script>
 
-    <script>
-        window.onload = function() {
-            var options = {
-                animationEnabled: true,
-                title: {
-                    text: "Prosentasi Review Makanan Enak dan Tidak Enak"
-                },
-                data: [{
-                    type: "doughnut",
-                    innerRadius: "40%",
-                    showInLegend: true,
-                    legendText: "{label}",
-                    indexLabel: "{label}: #percent%",
-                    dataPoints: dataPoints,
-                }]
-            };
-            myChartRasa = new CanvasJS.Chart("chartContainer", options);
-            myChartRasa.render();
-        }
+        function dataChartReseter() {
+            table.rows().eq(0).each(function(index) {
+                var row = table.row(index);
 
-        function renderChart() {
-            dataPoints[0]['y'] = countRasaEnak;
-            dataPoints[1]['y'] = countRasaTidakEnak;
-            myChartRasa.render();
+                var data = row.data();
+                let dateData2 = new Date(data[2]);
+                let dateDataMin = new Date(document.getElementById("min").value);
+                let dateDataMax = new Date(document.getElementById("max").value);
+
+                if (document.getElementById("min").value == null || document.getElementById(
+                        "min").value == "") {
+                    var min = true;
+                } else {
+                    var min = (dateData2 >= dateDataMin);
+                }
+                if (document.getElementById("max").value == null || document.getElementById(
+                        "max").value == "") {
+                    var max = true;
+                } else {
+                    var max = (dateDataMax >= dateData2);
+                }
+
+                if (min && max) {
+                    if (data[5] == "Enak") {
+                        countRasaEnak++;
+                    } else {
+                        countRasaTidakEnak++;
+                    }
+
+                    if (data[6] == "Menarik") {
+                        countPenamilanBaik++;
+                    } else {
+                        countPenamilanTidakBaik++;
+                    }
+
+                    if (data[7] == "Sesuai") {
+                        countTeksturSesuai++;
+                    } else {
+                        countTeksturTidakSesuai++;
+                    }
+
+                    if (data[8] == "Bervariasi") {
+                        countBervariasi++;
+                    } else {
+                        countTidakBervariasi++;
+                    }
+                }
+            });
+
+            renderChart();
+            renderChart0();
+            renderChart1();
+            renderChart2();
+
             countRasaEnak = 0;
             countRasaTidakEnak = 0;
             countPenamilanBaik = 0;
             countPenamilanTidakBaik = 0;
+            countTeksturSesuai = 0;
+            countTeksturTidakSesuai = 0;
+            countBervariasi=0;
+            countTidakBervariasi=0;
+        }
+    </script>
+
+    <script>
+        var options = {
+            animationEnabled: true,
+            title: {
+                text: "Prosentase Review Makanan Enak dan Tidak Enak"
+            },
+            data: [{
+                type: "doughnut",
+                innerRadius: "40%",
+                showInLegend: true,
+                legendText: "{label}",
+                indexLabel: "{label}: #percent%",
+                dataPoints: dataPoints['rasa'],
+            }]
+        };
+
+        function renderChart() {
+            document.getElementById("chartContainer").innerHTML = "";
+            myChartRasa = new CanvasJS.Chart("chartContainer", options);
+            dataPoints['rasa'][0]['y'] = countRasaEnak;
+            dataPoints['rasa'][1]['y'] = countRasaTidakEnak;
+            myChartRasa.render();
+        }
+    </script>
+
+    <script>
+        var options0 = {
+            animationEnabled: true,
+            title: {
+                text: "Prosentase Review Tampilan Makanan"
+            },
+            data: [{
+                type: "doughnut",
+                innerRadius: "40%",
+                showInLegend: true,
+                legendText: "{label}",
+                indexLabel: "{label}: #percent%",
+                dataPoints: dataPoints['tampilan'],
+            }]
+        };
+
+
+        function renderChart0() {
+            document.getElementById("chartContainer0").innerHTML = "";
+            myChartTampilan = new CanvasJS.Chart("chartContainer0", options0);
+            dataPoints['tampilan'][0]['y'] = countPenamilanBaik;
+            dataPoints['tampilan'][1]['y'] = countPenamilanTidakBaik;
+            myChartTampilan.render();
+        }
+    </script>
+    <script>
+        var options1 = {
+            animationEnabled: true,
+            title: {
+                text: "Prosentase Review Tekstur Makanan"
+            },
+            data: [{
+                type: "doughnut",
+                innerRadius: "40%",
+                showInLegend: true,
+                legendText: "{label}",
+                indexLabel: "{label}: #percent%",
+                dataPoints: dataPoints['tekstur'],
+            }]
+        };
+
+
+        function renderChart1() {
+            document.getElementById("chartContainer1").innerHTML = "";
+            myChartTekstur = new CanvasJS.Chart("chartContainer1", options1);
+            dataPoints['tekstur'][0]['y'] = countTeksturSesuai;
+            dataPoints['tekstur'][1]['y'] = countTeksturTidakSesuai;
+            myChartTekstur.render();
+        }
+    </script>
+    <script>
+        var options2 = {
+            animationEnabled: true,
+            title: {
+                text: "Prosentase Review Variasi Makanan"
+            },
+            data: [{
+                type: "doughnut",
+                innerRadius: "40%",
+                showInLegend: true,
+                legendText: "{label}",
+                indexLabel: "{label}: #percent%",
+                dataPoints: dataPoints['variasi'],
+            }]
+        };
+
+
+        function renderChart2() {
+            document.getElementById("chartContainer2").innerHTML = "";
+            myChartVariasi = new CanvasJS.Chart("chartContainer2", options2);
+            dataPoints['variasi'][0]['y'] = countBervariasi;
+            dataPoints['variasi'][1]['y'] = countTidakBervariasi;
+            myChartVariasi.render();
+        }
+    </script>
+    <script>
+        window.onload = function() {
+            dataChartReseter();
         }
     </script>
 @endpush
@@ -245,7 +369,7 @@
                     </div>
                 </div>
 
-                <div class="mt-4 grid grid-cols-4 gap-4">
+                <div class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-4">
                     <div class="card">
                         <div class="card-header">
                             Chart Rasa
@@ -254,8 +378,33 @@
                             <div id="chartContainer" style="height: 370px; width: 100%;"></div>
                         </div>
                     </div>
-                    <!-- ... -->
-                    <div>09</div>
+                    <!-- Chart2 -->
+                    <div class="card">
+                        <div class="card-header">
+                            Chart Penampilan
+                        </div>
+                        <div class="card-body">
+                            <div id="chartContainer0" style="height: 370px; width: 100%;"></div>
+                        </div>
+                    </div>
+                    <!-- Chart3 -->
+                    <div class="card">
+                        <div class="card-header">
+                            Chart Tekstur
+                        </div>
+                        <div class="card-body">
+                            <div id="chartContainer1" style="height: 370px; width: 100%;"></div>
+                        </div>
+                    </div>
+                    <!-- Chart4 -->
+                    <div class="card">
+                        <div class="card-header">
+                            Chart Variasi
+                        </div>
+                        <div class="card-body">
+                            <div id="chartContainer2" style="height: 370px; width: 100%;"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
