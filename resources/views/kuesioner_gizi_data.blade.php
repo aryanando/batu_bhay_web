@@ -11,7 +11,36 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/3.0.0/js/buttons.html5.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/3.0.0/js/buttons.print.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.2/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/datetime/1.5.2/js/dataTables.dateTime.min.js"></script>
     <script>
+        let minDate, maxDate;
+
+        // Custom filtering function which will search data in column four between two values
+        DataTable.ext.search.push(function(settings, data, dataIndex) {
+            let min = minDate.val();
+            let max = maxDate.val();
+            let date = new Date(data[2]);
+
+            if (
+                (min === null && max === null) ||
+                (min === null && date <= max) ||
+                (min <= date && max === null) ||
+                (min <= date && date <= max)
+            ) {
+                return true;
+            }
+            return false;
+        });
+
+        // Create date inputs
+        minDate = new DateTime('#min', {
+            format: 'YYYY-MM-DD'
+        });
+        maxDate = new DateTime('#max', {
+            format: 'YYYY-MM-DD'
+        });
+
         let table = new DataTable('#myTable', {
             layout: {
                 topStart: {
@@ -21,15 +50,20 @@
                 }
             }
         });
+
+        document.querySelectorAll('#min, #max').forEach((el) => {
+            el.addEventListener('change', () => table.draw());
+        });
     </script>
 @endpush
 
 @push('custom-style')
-<link href="https://cdn.datatables.net/2.0.1/css/dataTables.dataTables.css" rel="stylesheet">
-<link href="https://cdn.datatables.net/buttons/3.0.0/css/buttons.dataTables.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/2.0.1/css/dataTables.dataTables.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/buttons/3.0.0/css/buttons.dataTables.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/datetime/1.5.2/css/dataTables.dateTime.min.css" rel="stylesheet">
 
-{{-- https://cdn.datatables.net/2.0.1/css/dataTables.dataTables.css --}}
-{{-- https://cdn.datatables.net/buttons/3.0.0/css/buttons.dataTables.css --}}
+    {{-- https://cdn.datatables.net/2.0.1/css/dataTables.dataTables.css --}}
+    {{-- https://cdn.datatables.net/buttons/3.0.0/css/buttons.dataTables.css --}}
 @endpush
 
 @section('content')
@@ -45,6 +79,18 @@
                                 {{ session('status') }}
                             </div>
                         @endif
+                        <table border="0" cellspacing="5" cellpadding="5">
+                            <tbody>
+                                <tr>
+                                    <td>Minimum date:</td>
+                                    <td><input type="text" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" id="min" name="min"></td>
+                                </tr>
+                                <tr>
+                                    <td>Maximum date:</td>
+                                    <td><input type="text" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" id="max" name="max"></td>
+                                </tr>
+                            </tbody>
+                        </table>
                         <table id="myTable">
                             <thead>
                                 <th>No.</th>
