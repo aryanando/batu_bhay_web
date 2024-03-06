@@ -369,7 +369,7 @@
                     </div>
                 </div>
 
-                <div class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-4">
+                <div class="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-4">
                     <div class="card">
                         <div class="card-header">
                             Chart Rasa
