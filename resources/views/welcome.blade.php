@@ -32,7 +32,7 @@
     <x-services />
     <x-poli />
     <x-testimony />
-    <x-team />
+    {{-- <x-team /> --}}
     {{-- <x-faq /> --}}
     {{-- <x-departement /> --}}
     <x-blog :post="$postData"/>
