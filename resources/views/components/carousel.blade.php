@@ -31,7 +31,7 @@
                             <div class="slide__number">Trending</div>
                             <div class="slide__title">Hyperbaric Therapy Oxygen</div>
                             <div class="slide__subtitle">Kini RS Bhayangkara Hasta Brata Batu menghadirkan terapi baru dengan memanfaatkan khasiat oksigen.</div>
-                            <a href="https://dev.batubhayangkara.com/id/blog/lebih-mudah-dengan-mobile-jkn" class="slide__btn">
+                            <a href="https://hiperbarik.batubhayangkara.com/" class="slide__btn">
                                 <span class="slide__btn__text">Lebih Lanjut</span>
                                 <span class="slide__btn__icon">
                                     <svg width="100%" height="100%" viewBox="0 0 17 21" fill="none"
@@ -75,7 +75,7 @@
                             <div class="slide__number">Unggulan</div>
                             <div class="slide__title">PIRATA - Hampiri, Rawat & Antar</div>
                             <div class="slide__subtitle">Ambulance Gratis untuk Area Kota Batu</div>
-                            <a href="https://hiperbarik.batubhayangkara.com/" class="slide__btn">
+                            <a href="https://dev.batubhayangkara.com/id/blog/pirata---hampiri-rawat-antar" class="slide__btn">
                                 <span class="slide__btn__text">Lebih Lanjut</span>
                                 <span class="slide__btn__icon">
                                     <svg width="100%" height="100%" viewBox="0 0 17 21" fill="none"
