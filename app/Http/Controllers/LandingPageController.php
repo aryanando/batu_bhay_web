@@ -12,12 +12,12 @@ class LandingPageController extends Controller
         $postData = BlogsModel::join('binshops_post_categories', 'binshops_post_categories.post_id', '=', 'binshops_post_translations.post_id')
         ->select("*")
         ->where('binshops_post_categories.category_id', "1")->offset(0)
-        ->limit(3)->get();
+        ->limit(3)->orderBy('id', 'DESC')->get();
 
         $buletinData = BlogsModel::join('binshops_post_categories', 'binshops_post_categories.post_id', '=', 'binshops_post_translations.post_id')
         ->select("*")
         ->where('binshops_post_categories.category_id', "2")->offset(0)
-        ->limit(3)->get();
+        ->limit(3)->orderBy('id', 'DESC')->get();
         return view("welcome", ['postData' => $postData, 'buletinData' => $buletinData]);
     }
 }
