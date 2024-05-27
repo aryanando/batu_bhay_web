@@ -53,6 +53,7 @@
                             peningkatan mutu rumah sakit, Rumah Sakit Bhayangkara Hasta Brata Batu membentuk suatu
                             komite yang bertugas membantu direktur untuk melaporkan indikator mutu di semua unit kerja.
                         </p>
+                        <img src="/assets/img/mutu/indikator.png"/>
 
                     </div>
                 </article>
