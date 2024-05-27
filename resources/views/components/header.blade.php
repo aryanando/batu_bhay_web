@@ -64,6 +64,10 @@
                                 class="text-secondary hover:text-accent transition-all duration-300">Pelayanan</a>
                         </li>
                         <li>
+                            <a href="/mutu"
+                                class="text-secondary hover:text-accent transition-all duration-300">Mutu</a>
+                        </li>
+                        <li>
                             <a href="/id/blog"
                                 class="text-secondary hover:text-accent transition-all duration-300">Blog</a>
                         </li>
@@ -111,6 +115,10 @@
                     <li>
                         <a href="#" onclick="my_modal_2.showModal()"
                             class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300">Pelayanan</a>
+                    </li>
+                    <li>
+                        <a href="/mutu"
+                            class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300">Mutu</a>
                     </li>
                     <li>
                         <a href="/id/blog"

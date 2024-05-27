@@ -30,6 +30,7 @@ Route::get('/blog', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/mutu', [App\Http\Controllers\MutuController::class, 'index'])->name('mutu');
 Route::get('/kuesioner/kepuasan-pasien-gizi/{no_rawat}', [KuesionerController::class, 'gizi']);
 Route::get('/kuesioner/data-kepuasan-pasien-gizi/{token}', [KuesionerController::class, 'getDataKuesionerGizi']);
 Route::post('/kuesioner/kepuasan-pasien-gizi/', [KuesionerController::class, 'simpanGizi']);
