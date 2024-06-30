@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\KuesionerController;
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\SurveyController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -34,3 +35,4 @@ Route::get('/mutu', [App\Http\Controllers\MutuController::class, 'index'])->name
 Route::get('/kuesioner/kepuasan-pasien-gizi/{no_rawat}', [KuesionerController::class, 'gizi']);
 Route::get('/kuesioner/data-kepuasan-pasien-gizi/{token}', [KuesionerController::class, 'getDataKuesionerGizi']);
 Route::post('/kuesioner/kepuasan-pasien-gizi/', [KuesionerController::class, 'simpanGizi']);
+Route::get('/survey', [SurveyController::class, 'index']);

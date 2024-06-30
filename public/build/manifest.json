@@ -1,39 +1,42 @@
 {
-  "_bootstrap.esm-uMiC6t4R.js": {
-    "file": "assets/bootstrap.esm-uMiC6t4R.js"
+  "_bootstrap.esm-CNm37Kvn.js": {
+    "file": "assets/bootstrap.esm-CNm37Kvn.js",
+    "name": "bootstrap.esm"
   },
   "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": {
-    "file": "assets/bootstrap-icons-TqycWyKO.woff",
+    "file": "assets/bootstrap-icons-BOrJxbIo.woff",
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff"
   },
   "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2": {
-    "file": "assets/bootstrap-icons-bb42NSi8.woff2",
+    "file": "assets/bootstrap-icons-BtvjY1KL.woff2",
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
   },
   "resources/css/app.css": {
-    "file": "assets/app-ZnTCuqmP.css",
-    "isEntry": true,
-    "src": "resources/css/app.css"
+    "file": "assets/app-D9w1HiHx.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-YLsziUTu.js",
-    "imports": [
-      "_bootstrap.esm-uMiC6t4R.js"
-    ],
+    "file": "assets/app-s1shrpOX.js",
+    "name": "app",
+    "src": "resources/js/app.js",
     "isEntry": true,
-    "src": "resources/js/app.js"
+    "imports": [
+      "_bootstrap.esm-CNm37Kvn.js"
+    ]
   },
   "resources/js/kuesioner-gizi.js": {
-    "file": "assets/kuesioner-gizi-V_jrXKx9.js",
-    "imports": [
-      "_bootstrap.esm-uMiC6t4R.js"
-    ],
+    "file": "assets/kuesioner-gizi-Cg-Xzw4q.js",
+    "name": "kuesioner-gizi",
+    "src": "resources/js/kuesioner-gizi.js",
     "isEntry": true,
-    "src": "resources/js/kuesioner-gizi.js"
+    "imports": [
+      "_bootstrap.esm-CNm37Kvn.js"
+    ]
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-vIrzpaxq.css",
-    "isEntry": true,
-    "src": "resources/sass/app.scss"
+    "file": "assets/app-BXlkkItR.css",
+    "src": "resources/sass/app.scss",
+    "isEntry": true
   }
 }
