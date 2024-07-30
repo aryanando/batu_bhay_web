@@ -72,13 +72,13 @@
                     <!-- list 2 -->
                     <ul class="flex-1 flex flex-col gap-y-5">
                         <li>
-                            <a href="/id/blog/category/buletin" class="hover:text-accent transition-all">Buletin</a>
+                            <a href="{{ url('/id/blog/dipa-rs-bhayangkara-hasta-brata-batu') }}" class="hover:text-accent transition-all">Kertas Kerja</a>
                         </li>
                         <li>
                             <a href="#0" onclick="my_modal_2.showModal()" class="hover:text-accent transition-all">Contact</a>
                         </li>
                         <li>
-                            <a href="#0" onclick="my_modal_2.showModal()" class="hover:text-accent transition-all">Careers</a>
+                            <a href="/id/blog/category/buletin" class="hover:text-accent transition-all">Buletin</a>
                         </li>
                         <li>
                             <a href="#0" onclick="my_modal_2.showModal()" class="hover:text-accent transition-all">Faqs</a>
