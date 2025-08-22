@@ -21,7 +21,7 @@
     <link rel="icon" href="https://batubhayangkara.com/wp-content/uploads/2022/06/cropped-logo-hasta-192x192.png"
         sizes="192x192">
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=WvG2Huaq"></script>
 </head>
 
 <body>
